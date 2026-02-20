@@ -1,7 +1,7 @@
 ﻿//#9 Составить программу нахождения произведения двух наименьших из трех различных чисел.
 using System;
 
-namespace MyProgram
+namespace IfTask
 {
     public class Logic
     {
