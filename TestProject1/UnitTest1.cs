@@ -1,4 +1,5 @@
 ﻿using IfTask;
+using NUnit.Framework;
 namespace TestProject1
 {
     public class Tests
@@ -9,9 +10,16 @@ namespace TestProject1
         }
 
         [Test]
-        public void GreatestTest()
+        public void FirstSecondLowestTest()
         {
-            Assert.Pass();
+            int firstInt = 10;
+
+            int secondInt = 5;
+
+            int thirdInt = 30;
+
+            var lowestMultiplication = Logic.Lowest(firstInt, secondInt, thirdInt);
+            Assert.That(50, Is.EqualTo(lowestMultiplication));
         }
     }
 }
