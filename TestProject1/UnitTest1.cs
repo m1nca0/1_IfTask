@@ -9,7 +9,7 @@ public class Tests
     }
 
     [Test]
-    public void FirstSecondLowestTest()
+    public void StandartTest()
     {
         int firstInt = 10;
 
@@ -17,31 +17,44 @@ public class Tests
 
         int thirdInt = 30;
 
-        var lowestMultiplication = Logic.Lowest(firstInt, secondInt, thirdInt);
+        var lowestMultiplication = Logic.Multiply(firstInt, secondInt, thirdInt);
         Assert.That(50, Is.EqualTo(lowestMultiplication));
     }
     [Test]
-    public void FirstThirdLowestTest()
+    public void NegativeTest()
     {
         int firstInt = 15;
 
-        int secondInt = 50;
+        int secondInt = -4;
 
-        int thirdInt = 2;
+        int thirdInt = -10;
 
-        var lowestMultiplication = Logic.Lowest(firstInt, secondInt, thirdInt);
-        Assert.That(30, Is.EqualTo(lowestMultiplication));
+        var lowestMultiplication = Logic.Multiply(firstInt, secondInt, thirdInt);
+        Assert.That(40, Is.EqualTo(lowestMultiplication));
     }
     [Test]
-    public void SecondThirdLowestTest()
+    public void ZeroTest()
     {
         int firstInt = 200;
 
-        int secondInt = 50;
+        int secondInt = 0;
 
         int thirdInt = 2;
 
-        var lowestMultiplication = Logic.Lowest(firstInt, secondInt, thirdInt);
-        Assert.That(100, Is.EqualTo(lowestMultiplication));
+        var lowestMultiplication = Logic.Multiply(firstInt, secondInt, thirdInt);
+        Assert.That(0, Is.EqualTo(lowestMultiplication));
     } 
+    [Test]
+    
+    public void SameValue()
+    {
+        int firstInt = 40;
+
+        int secondInt = 40;
+
+        int thirdInt = 40;
+
+        var lowestMultiplication = Logic.Multiply(firstInt, secondInt, thirdInt);
+        Assert.That(40 * 40, Is.EqualTo(lowestMultiplication));
+    }
 }

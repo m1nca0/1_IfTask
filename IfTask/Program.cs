@@ -5,7 +5,7 @@ namespace IfTask
 {
     public class Logic
     {
-        public static int Lowest(int firstInt, int secondInt, int thirdInt)
+        public static int Multiply(int firstInt, int secondInt, int thirdInt)
         {
             int[] numbers = new int[] { firstInt, secondInt, thirdInt };
             Array.Sort(numbers);
@@ -25,7 +25,7 @@ namespace IfTask
             Console.WriteLine("Введите третье число: ");
             int thirdInt = int.Parse(Console.ReadLine());
 
-            var lowestMultiplication = Logic.Lowest(firstInt, secondInt, thirdInt);
+            var lowestMultiplication = Logic.Multiply(firstInt, secondInt, thirdInt);
             Console.WriteLine("Ответ: " + lowestMultiplication);
         }
     }
